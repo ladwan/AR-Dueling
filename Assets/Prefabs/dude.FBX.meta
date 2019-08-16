@@ -1,0 +1,235 @@
+fileFormatVersion: 2
+guid: 4d8086bb91513414bb59234c12a0bc5b
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Body_SKIN
+    100002: //RootNode
+    100004: Hip_CTRL
+    100006: IK Chain002
+    100008: L_Bicep
+    100010: L_Clavical
+    100012: L_Foot
+    100014: L_Foot_CTRL
+    100016: L_Foot_HLPR
+    100018: L_Foot_SKIN
+    100020: L_Forearm
+    100022: L_Hand_IK_CTRL
+    100024: L_Hand_NUB
+    100026: L_Hand_SKIN
+    100028: L_Heel_IK
+    100030: L_Knee_SKIN
+    100032: L_NUB
+    100034: L_Shin
+    100036: L_Shin_SKIN
+    100038: L_Thigh
+    100040: L_Thigh_SKIN
+    100042: L_Toe_IK
+    100044: MAIN_CTRL
+    100046: MAIN_Spine
+    100048: Pelvis
+    100050: R_Bicep
+    100052: R_Clavical
+    100054: R_Foot
+    100056: R_Foot_CTRL
+    100058: R_Foot_HLPR
+    100060: R_Foot_SKIN
+    100062: R_Forearm
+    100064: R_Hand_IK
+    100066: R_Hand_IK_CTRL
+    100068: R_Hand_NUB
+    100070: R_Hand_SKIN
+    100072: R_Heel_IK
+    100074: R_Knee_SKIN
+    100076: R_NUB
+    100078: R_Shin
+    100080: R_Shin_SKIN
+    100082: R_Thigh
+    100084: R_Thigh_SKIN
+    100086: R_Toe_IK
+    100088: Spine_Bottom
+    400000: Body_SKIN
+    400002: //RootNode
+    400004: Hip_CTRL
+    400006: IK Chain002
+    400008: L_Bicep
+    400010: L_Clavical
+    400012: L_Foot
+    400014: L_Foot_CTRL
+    400016: L_Foot_HLPR
+    400018: L_Foot_SKIN
+    400020: L_Forearm
+    400022: L_Hand_IK_CTRL
+    400024: L_Hand_NUB
+    400026: L_Hand_SKIN
+    400028: L_Heel_IK
+    400030: L_Knee_SKIN
+    400032: L_NUB
+    400034: L_Shin
+    400036: L_Shin_SKIN
+    400038: L_Thigh
+    400040: L_Thigh_SKIN
+    400042: L_Toe_IK
+    400044: MAIN_CTRL
+    400046: MAIN_Spine
+    400048: Pelvis
+    400050: R_Bicep
+    400052: R_Clavical
+    400054: R_Foot
+    400056: R_Foot_CTRL
+    400058: R_Foot_HLPR
+    400060: R_Foot_SKIN
+    400062: R_Forearm
+    400064: R_Hand_IK
+    400066: R_Hand_IK_CTRL
+    400068: R_Hand_NUB
+    400070: R_Hand_SKIN
+    400072: R_Heel_IK
+    400074: R_Knee_SKIN
+    400076: R_NUB
+    400078: R_Shin
+    400080: R_Shin_SKIN
+    400082: R_Thigh
+    400084: R_Thigh_SKIN
+    400086: R_Toe_IK
+    400088: Spine_Bottom
+    2100000: No Name
+    2300000: L_Foot_CTRL
+    2300002: R_Foot_CTRL
+    3300000: L_Foot_CTRL
+    3300002: R_Foot_CTRL
+    4300000: Body_SKIN
+    4300002: R_Foot_SKIN
+    4300004: R_Shin_SKIN
+    4300006: R_Knee_SKIN
+    4300008: R_Thigh_SKIN
+    4300010: L_Thigh_SKIN
+    4300012: L_Knee_SKIN
+    4300014: L_Shin_SKIN
+    4300016: L_Foot_SKIN
+    4300018: R_Hand_SKIN
+    4300020: L_Hand_SKIN
+    4300022: R_Foot_CTRL
+    4300024: L_Foot_CTRL
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Body_SKIN
+    13700002: L_Foot_SKIN
+    13700004: L_Hand_SKIN
+    13700006: L_Knee_SKIN
+    13700008: L_Shin_SKIN
+    13700010: L_Thigh_SKIN
+    13700012: R_Foot_SKIN
+    13700014: R_Hand_SKIN
+    13700016: R_Knee_SKIN
+    13700018: R_Shin_SKIN
+    13700020: R_Thigh_SKIN
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
