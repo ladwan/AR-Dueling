@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UMA.CharacterSystem;
 
 public class LootItem : MonoBehaviour {
 
@@ -15,11 +16,14 @@ public class LootItem : MonoBehaviour {
 
     public void NewScene()
     {
+
         SceneManager.LoadScene(7);
+
     }
 
     public void NewScene1()
     {
+        EquipmentSave.instance.SaveEquipment(FindObjectOfType<DynamicCharacterAvatar>().GetCurrentRecipe());
         SceneManager.LoadScene(6);
     }
 
@@ -32,4 +36,7 @@ public class LootItem : MonoBehaviour {
     {
         SceneManager.LoadScene(3);
     }
+
+
+
 }

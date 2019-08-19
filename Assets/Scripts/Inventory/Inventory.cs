@@ -22,15 +22,14 @@ public class Inventory : MonoBehaviour {
 
     public DynamicCharacterAvatar UmaRef;
 
-
-
     bool _doOnce;
+
     #region Singleton
     private void Awake()
     {
         if (instance != null)
         {
-            Debug.Log("Ya fucked up");
+            Debug.Log("More than 1 Inventory dectected");
             return;
         }
         instance = this;
@@ -49,8 +48,7 @@ public class Inventory : MonoBehaviour {
     }
 
     private void OnDisable()
-    {
-       
+    {     
         SceneManager.sceneLoaded -= OnLevelLoaded;
     }
 
@@ -61,12 +59,11 @@ public class Inventory : MonoBehaviour {
 
         if (SceneManager.GetActiveScene().name == "Inventory")
         {
-
             this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
+
         if (SceneManager.GetActiveScene().name == "MainCity")
         {
-
             this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
         }
     }
@@ -103,6 +100,8 @@ public class Inventory : MonoBehaviour {
         });
 
     }
+
+
 
     public List<Item> items = new List<Item>();
 
@@ -200,6 +199,7 @@ public class Inventory : MonoBehaviour {
                         TorsoIcon.sprite = Ready2EquiptItem.icon;
                         Description.text = Ready2EquiptItem.Description;
                         UmaRef.SetSlot("Chest", Ready2EquiptItem.UmaRecipe);
+                        
                         UmaRef.BuildCharacter();
                         
                         break;

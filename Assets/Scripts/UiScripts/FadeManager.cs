@@ -12,6 +12,9 @@ public class FadeManager : MonoBehaviour {
     Image _fadePanel;
     int _sceneToLoad;
     bool _alreadyLoaded;
+    Canvas _canvasREF;
+
+    #region Singleton
     private void Awake()
     {
         if (instance == null)
@@ -22,11 +25,14 @@ public class FadeManager : MonoBehaviour {
 
         }
     }
+    #endregion
+
 
     public void Start()
     {
 
         _fadePanel = gameObject.GetComponentInChildren<Image>();
+        _canvasREF = gameObject.transform.GetChild(0).GetComponent<Canvas>();
     }
     public void FadeOut (int SceneToLoad)
     {
@@ -41,21 +47,27 @@ public class FadeManager : MonoBehaviour {
     IEnumerator FadeTo(float aValue, float aTime)
     {
         float alpha = _fadePanel.color.a;
+
+        if (!_alreadyLoaded)
+        {
+            _canvasREF.sortingOrder = 1;
+
+        }
+
         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / aTime)
         {
             Color newColor = new Color(0, 0, 0, Mathf.Lerp(alpha, aValue, t));
             _fadePanel.color = newColor;
 
-
-
-
             yield return null;
+        }
 
+        if (_alreadyLoaded)
+        {
+            _canvasREF.sortingOrder = -1;
 
         }
-        
 
-       
         if (!_alreadyLoaded)
         {
             yield return new WaitForSeconds(1);
@@ -88,7 +100,7 @@ public class FadeManager : MonoBehaviour {
             StartCoroutine(FadeTo(0.0f, 1.0f));
  
             yield return null;
-            StopCoroutine(Reset());
+            //StopCoroutine(Reset());
 
         }
 

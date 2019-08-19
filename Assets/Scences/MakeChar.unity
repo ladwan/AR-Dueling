@@ -2017,6 +2017,52 @@ MonoBehaviour:
   Ref: {fileID: 369535571}
   Player: {fileID: 1210157121}
   SkinMat: {fileID: 2100000, guid: f64268d74eaa2f34d90405bfa41e475f, type: 2}
+--- !u!1001 &744131007
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4723428010469610, guid: 22d6120b88105d84ea1e396a91637cd1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 355.3251
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723428010469610, guid: 22d6120b88105d84ea1e396a91637cd1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 167.9787
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723428010469610, guid: 22d6120b88105d84ea1e396a91637cd1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.41251475
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723428010469610, guid: 22d6120b88105d84ea1e396a91637cd1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723428010469610, guid: 22d6120b88105d84ea1e396a91637cd1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723428010469610, guid: 22d6120b88105d84ea1e396a91637cd1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723428010469610, guid: 22d6120b88105d84ea1e396a91637cd1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4723428010469610, guid: 22d6120b88105d84ea1e396a91637cd1, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1143847902951650, guid: 22d6120b88105d84ea1e396a91637cd1, type: 2}
+      propertyPath: m_Name
+      value: SaveManager (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 22d6120b88105d84ea1e396a91637cd1, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &777284397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2728,6 +2774,16 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114969792755749962, guid: 7cc4388f32e7fe048a93746e04776938,
+        type: 2}
+      propertyPath: preloadWardrobeRecipes.recipes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969792755749962, guid: 7cc4388f32e7fe048a93746e04776938,
+        type: 2}
+      propertyPath: preloadWardrobeRecipes.recipes.Array.data[1]._compatibleRaces.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4438591399878736, guid: 7cc4388f32e7fe048a93746e04776938, type: 2}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -2770,6 +2826,21 @@ Prefab:
       propertyPath: context
       value: 
       objectReference: {fileID: 341043963}
+    - target: {fileID: 114969792755749962, guid: 7cc4388f32e7fe048a93746e04776938,
+        type: 2}
+      propertyPath: preloadWardrobeRecipes.recipes.Array.data[0]._recipeName
+      value: T1Legs_Recipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969792755749962, guid: 7cc4388f32e7fe048a93746e04776938,
+        type: 2}
+      propertyPath: preloadWardrobeRecipes.recipes.Array.data[1]._recipeName
+      value: WornGarb_Recipe
+      objectReference: {fileID: 0}
+    - target: {fileID: 114969792755749962, guid: 7cc4388f32e7fe048a93746e04776938,
+        type: 2}
+      propertyPath: preloadWardrobeRecipes.recipes.Array.data[1]._compatibleRaces.Array.data[0]
+      value: MaleFighter
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cc4388f32e7fe048a93746e04776938, type: 2}
   m_IsPrefabAsset: 0

@@ -20,12 +20,13 @@ public class PlayerScript : MonoBehaviour
     GameObject Player;
 
     
-    public DynamicCharacterAvatar UmaRef;
+     public DynamicCharacterAvatar UmaRef;
     
 
 
     public void Start()
     {
+        UmaRef = gameObject.GetComponent<DynamicCharacterAvatar>();
         PlayerCanvas = GameObject.FindGameObjectWithTag("PlayerCanvas");
         FightUI = GameObject.Find("FightUI Holder");
 
@@ -59,8 +60,8 @@ public class PlayerScript : MonoBehaviour
     }
     public void CreateChar()
     {
-        //FadeManager.instance.FadeOut(9);
-        SceneManager.LoadScene("MainCity");
+        FadeManager.instance.FadeOut(9);
+        //SceneManager.LoadScene("MainCity");
     }
 
     public void CheckStats()
