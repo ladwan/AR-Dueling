@@ -16,20 +16,20 @@ public class LootItem : MonoBehaviour {
 
     public void NewScene()
     {
-
-        SceneManager.LoadScene(7);
+        FadeManager.instance.FadeOut(7);
+        //SceneManager.LoadScene(7);
 
     }
 
     public void NewScene1()
     {
         EquipmentSave.instance.SaveEquipment(FindObjectOfType<DynamicCharacterAvatar>().GetCurrentRecipe());
-        SceneManager.LoadScene(6);
+        FadeManager.instance.FadeOut(6);
     }
 
     public void NewScene2()
     {
-        SceneManager.LoadScene(8);
+        FadeManager.instance.FadeOut(8);
     }
 
     public void OpenFight()

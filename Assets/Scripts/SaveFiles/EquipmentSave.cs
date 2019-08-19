@@ -22,16 +22,22 @@ public class EquipmentSave : MonoBehaviour {
       
     public void SaveEquipment(string _baseRecipe)
     {
+       // PlayerPrefs.SetFloat("SkinR",_skin.r);
+      //  PlayerPrefs.SetFloat("SkinG", _skin.g);
+        //PlayerPrefs.SetFloat("SkinB", _skin.b);
+
         PlayerPrefs.SetString("BaseRecipe", _baseRecipe);
-        Debug.Log("Equipment Has Been Saved !");
+
+        Debug.Log("Loadout Has Been Saved !");
     }
 
 
     public void LoadEquipment(DynamicCharacterAvatar _refUma)
     {
-        //_refUma.GetColor("");
-       // _refUma.SetColor("", C);
+       // _refUma.SetColor("Skin", new Color (PlayerPrefs.GetFloat("SkinR"), PlayerPrefs.GetFloat("SkinG"), PlayerPrefs.GetFloat("SkinB")));
         _refUma.LoadFromRecipeString(PlayerPrefs.GetString("BaseRecipe"));
+        _refUma.BuildCharacter();
+
         Debug.Log("Equipment Has Been Loaded!");
     }
 }

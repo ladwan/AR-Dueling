@@ -60,6 +60,8 @@ public class PlayerScript : MonoBehaviour
     }
     public void CreateChar()
     {
+        EquipmentSave.instance.SaveEquipment(FindObjectOfType<DynamicCharacterAvatar>().GetCurrentRecipe());
+
         FadeManager.instance.FadeOut(9);
         //SceneManager.LoadScene("MainCity");
     }

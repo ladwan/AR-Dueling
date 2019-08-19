@@ -13,7 +13,8 @@ public class CameraMove : MonoBehaviour {
     bool isMarket, isGrave, isFight, isReset;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
 
         StartingPoint = transform.position;
        
@@ -21,10 +22,9 @@ public class CameraMove : MonoBehaviour {
 
 
 
-public void MarketClick()
+    public void MarketClick()
     {
         Overview.enabled = false;
-        Market.enabled = true;
 
         if (transform.position != MarketPoint.transform.position)
         {
@@ -35,7 +35,6 @@ public void MarketClick()
     public void GraveClick()
     {
         Overview.enabled = false;
-        Grave.enabled = true;
 
         if (transform.position != GravePoint.transform.position)
         {
@@ -46,7 +45,6 @@ public void MarketClick()
     public void FightClick()
     {
         Overview.enabled = false;
-        Colosseum.enabled = true;
 
         if (transform.position != FightPoint.transform.position)
         {
@@ -76,6 +74,7 @@ public void MarketClick()
             transform.position = Vector3.Lerp(transform.position, MarketPoint.transform.position, Time.deltaTime * Speed);
             if(transform.position.Round(1) == MarketPoint.transform.position.Round(1))
             {
+                Market.enabled = true;
                 isMarket = false;
                 Debug.Log("Market Reached");
             }
@@ -86,6 +85,7 @@ public void MarketClick()
             transform.position = Vector3.Lerp(transform.position, GravePoint.transform.position, Time.deltaTime * Speed);
             if (transform.position.Round(1) == GravePoint.transform.position.Round(1))
             {
+                Grave.enabled = true;
                 isGrave = false;
                 Debug.Log("Grave Reached");
             }
@@ -96,6 +96,7 @@ public void MarketClick()
             transform.position = Vector3.Lerp(transform.position, FightPoint.transform.position, Time.deltaTime * Speed);
             if (transform.position.Round(1) == FightPoint.transform.position.Round(1))
             {
+                Colosseum.enabled = true;
                 isFight = false;
                 Debug.Log("Colleseum Reached");
             }

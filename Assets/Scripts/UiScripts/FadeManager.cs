@@ -84,25 +84,9 @@ public class FadeManager : MonoBehaviour {
 
     IEnumerator Reset()
     {
-
-/*
-        if (!_doSwitch)
-        {
-            StartCoroutine(FadeTo(1.0f, 1.0f));
-            _doSwitch = true;
-            yield return null;
-            StopCoroutine(Reset());
-        }
-        else */
-        {
-
             _alreadyLoaded = true;
             StartCoroutine(FadeTo(0.0f, 1.0f));
  
             yield return null;
-            //StopCoroutine(Reset());
-
-        }
-
     }
 }

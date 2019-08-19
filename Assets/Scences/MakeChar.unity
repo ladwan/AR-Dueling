@@ -1218,7 +1218,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -42.3, y: -60}
+  m_AnchoredPosition: {x: -42.3, y: -67}
   m_SizeDelta: {x: 83.9, y: 23.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &482712013
@@ -1746,7 +1746,7 @@ GameObject:
   - component: {fileID: 681512268}
   - component: {fileID: 681512271}
   m_Layer: 5
-  m_Name: EyesButton
+  m_Name: HairButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1770,8 +1770,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305.19995, y: -131.1}
-  m_SizeDelta: {x: 93.5, y: 102.66}
+  m_AnchoredPosition: {x: -305.19995, y: -2.6}
+  m_SizeDelta: {x: 114.82, y: 102.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681512268
 MonoBehaviour:
@@ -1844,7 +1844,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 7ec448af0ff92cf42b02cf82bd332291, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4d52ce3fee5a5b840832cdfe4c1aafda, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1888,7 +1888,7 @@ GameObject:
   - component: {fileID: 728325468}
   - component: {fileID: 728325471}
   m_Layer: 5
-  m_Name: hairButton
+  m_Name: hairColorButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1912,7 +1912,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305.19998, y: 4}
+  m_AnchoredPosition: {x: -305.19998, y: -140.3}
   m_SizeDelta: {x: 100.4, y: 74.77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728325468
@@ -2724,7 +2724,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 12.1}
+  m_AnchoredPosition: {x: -3.5, y: -16.1}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1177071528
@@ -2759,7 +2759,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Eye Color
+  m_Text: 'Hair Style
+
+'
 --- !u!222 &1177071529
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3512,7 +3514,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 44.20002, y: -59.999985}
+  m_AnchoredPosition: {x: 44.20002, y: -67}
   m_SizeDelta: {x: 83.9, y: 23.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464280028
