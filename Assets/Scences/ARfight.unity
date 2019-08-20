@@ -5751,7 +5751,7 @@ MonoBehaviour:
   Counter: {fileID: 628520608}
   HostAnimREF: {fileID: 0}
   ClientAnimREF: {fileID: 0}
-  ClientAnimBallREF: {fileID: 0}
+  ClientAnimBallREF: {fileID: 770295847}
   Red: {r: 1, g: 0, b: 0.009047508, a: 0}
   Yellow: {r: 1, g: 0.89104825, b: 0, a: 0}
   Black: {r: 0, g: 0, b: 0, a: 0}
@@ -6613,8 +6613,8 @@ MonoBehaviour:
   m_PlayerPrefab: {fileID: 0}
   m_AutoCreatePlayer: 1
   m_PlayerSpawnMethod: 1
-  m_OfflineScene: HelloAR
-  m_OnlineScene: HelloAR
+  m_OfflineScene: 
+  m_OnlineScene: 
   m_SpawnPrefabs:
   - {fileID: 1592018278707600, guid: 81b4af6443b89634fb5aef48da30dabe, type: 2}
   - {fileID: 1364982681584686, guid: cda2c79334b02344b970a75f6d0ea95c, type: 2}
@@ -8327,6 +8327,29 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1951859210 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1484214145335792, guid: 7cc4388f32e7fe048a93746e04776938,
+    type: 2}
+  m_PrefabInternal: {fileID: 844051075}
+--- !u!95 &1951859216
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1951859210}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: eb280940c811fab4a9e3ddf09381c343, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2016872668
 GameObject:
   m_ObjectHideFlags: 0
