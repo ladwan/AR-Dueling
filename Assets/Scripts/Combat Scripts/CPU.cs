@@ -8,7 +8,7 @@ public class CPU : MonoBehaviour
 
 
     public static CPU instance;
-
+    public Animator CpuAnim;
 
 
     void Awake()
@@ -33,4 +33,5 @@ public class CPU : MonoBehaviour
             Destroy(instance);
         }
     }
+
 }

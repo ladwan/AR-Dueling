@@ -15,6 +15,7 @@ using UMA.PoseTools;//so we can set the expression set based on the race
 
 namespace UMA.CharacterSystem
 {
+
     public class DynamicCharacterAvatar : UMAAvatarBase
     {
         #region Extra Events
@@ -1764,38 +1765,43 @@ namespace UMA.CharacterSystem
         /// </summary>
         public void SetAnimatorController(bool addAnimator = false)
         {
+
+
             RuntimeAnimatorController controllerToUse = raceAnimationControllers.GetAnimatorForRace(activeRace.name);
 
-            //changing the animationController in 5.6 resets the rotation of this game object
-            //so store the rotation and set it back
-            var originalRot = Quaternion.identity;
-            if (umaData != null)
-                originalRot = umaData.transform.localRotation;
+           
+                //changing the animationController in 5.6 resets the rotation of this game object
+                //so store the rotation and set it back
+                var originalRot = Quaternion.identity;
+                if (umaData != null)
+                    originalRot = umaData.transform.localRotation;
 
-            animationController = controllerToUse;
-            var thisAnimator = gameObject.GetComponent<Animator>();
-            if (controllerToUse != null)
-            {
-                if (thisAnimator == null && addAnimator)
-                    thisAnimator = gameObject.AddComponent<Animator>();
-                if (thisAnimator != null)
+                animationController = controllerToUse;
+                var thisAnimator = gameObject.GetComponent<Animator>();
+                if (controllerToUse != null)
                 {
-                    thisAnimator.runtimeAnimatorController = controllerToUse;
-                    if (!requiredAssetsToCheck.Contains(controllerToUse.name) && DynamicAssetLoader.Instance.downloadingAssetsContains(controllerToUse.name))
+                    if (thisAnimator == null && addAnimator)
+                        thisAnimator = gameObject.AddComponent<Animator>();
+                    if (thisAnimator != null)
                     {
-                        requiredAssetsToCheck.Add(controllerToUse.name);
+                        thisAnimator.runtimeAnimatorController = controllerToUse;
+                        if (!requiredAssetsToCheck.Contains(controllerToUse.name) && DynamicAssetLoader.Instance.downloadingAssetsContains(controllerToUse.name))
+                        {
+                            requiredAssetsToCheck.Add(controllerToUse.name);
+                        }
                     }
                 }
-            }
-            else
-            {
-                if (thisAnimator != null)
+                else
                 {
-                    thisAnimator.runtimeAnimatorController = null;
+                    if (thisAnimator != null)
+                    {
+                        thisAnimator.runtimeAnimatorController = null;
+                    }
                 }
-            }
-            if (umaData != null)
-                umaData.transform.localRotation = originalRot;
+                if (umaData != null)
+                    umaData.transform.localRotation = originalRot;
+            
+
         }
 
         #endregion

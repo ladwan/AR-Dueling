@@ -47,11 +47,11 @@ public class CombatManager : MonoBehaviour {
         //Find Players in Scene
         if (Players.Length != 0)
         {
-            HostPlayer = Players[0];
+            HostPlayer = Players[1];
             HostPlayer.tag = "Host";
             HostPlayer.AddComponent<HostCombat1>();
             
-            ClientPlayer = Players[1];
+            ClientPlayer = Players[0];
             ClientPlayer.tag = "Client";
             ClientPlayer.AddComponent<ClientCombatOg>();
 
@@ -88,7 +88,7 @@ public class CombatManager : MonoBehaviour {
              }  */
 
 
-            CpuAggroREF = ClientPlayer.transform.GetChild(3).transform.GetChild(0).gameObject;
+            CpuAggroREF = ClientPlayer.transform.GetChild(1).transform.GetChild(0).gameObject;
             Thing = CpuAggroREF.GetComponent<Renderer>().material;
 
 
@@ -753,6 +753,6 @@ public class CombatManager : MonoBehaviour {
         //Destroy(SwipeHolder);
         HostPlayer.GetComponent<PlayerScript>().FightUI.SetActive(false);
         Time.timeScale = 1f;
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(6);
     }
 }
