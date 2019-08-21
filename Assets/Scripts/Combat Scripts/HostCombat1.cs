@@ -70,7 +70,7 @@ public class HostCombat1 : MonoBehaviour {
         if (HostSliderUP.value == 1)
         {
             HostInput = "Up";
-            BlockableREF = GameObject.Find("Directional Light").GetComponent<CombatManager>().Blockable;
+            BlockableREF = Camera.main.GetComponent<CombatManager>().Blockable;
             Debug.Log("Guarding Up !");
 
         }
@@ -78,7 +78,7 @@ public class HostCombat1 : MonoBehaviour {
         if (HostSlider.value == 1)
         {
             HostInput = "Left";
-            BlockableREF = GameObject.Find("Directional Light").GetComponent<CombatManager>().Blockable;
+            BlockableREF = Camera.main.GetComponent<CombatManager>().Blockable;
 
             Debug.Log("Guarding Left !");
         }
@@ -86,7 +86,7 @@ public class HostCombat1 : MonoBehaviour {
         {
             HostInput = "Right";
 
-            BlockableREF = GameObject.Find("Directional Light").GetComponent<CombatManager>().Blockable;
+            BlockableREF = Camera.main.GetComponent<CombatManager>().Blockable;
             Debug.Log("Guarding Right !");
         }
     }
@@ -124,7 +124,7 @@ public class HostCombat1 : MonoBehaviour {
 
         if (Camera.main.GetComponent<SetCharPosition>().fightReady == true)
         {
-            if (GameObject.Find("Directional Light").GetComponent<CombatManager>().TurnOver >= 3)
+            if (Camera.main.GetComponent<CombatManager>().TurnOver >= 3)
             {
                 HostTurn = true;
                 HostDefCanvas.enabled = false;

@@ -6,7 +6,7 @@ public class GoBack : MonoBehaviour {
 
     public void ToMainMenu()
     {
-        //Camera.main.GetComponent<CombatManager>().Gameloop();
-        SceneManager.LoadScene(1);
+        Camera.main.GetComponent<CombatManager>().Gameloop();
+        SceneManager.LoadScene(6);
     }
 }

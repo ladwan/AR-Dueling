@@ -47,13 +47,28 @@ public class CombatManager : MonoBehaviour {
         //Find Players in Scene
         if (Players.Length != 0)
         {
-            HostPlayer = Players[1];
-            HostPlayer.tag = "Host";
-            HostPlayer.AddComponent<HostCombat1>();
+            if(Players[0].name == "PlayerChar01")
+            {
+                HostPlayer = Players[0];
+                HostPlayer.tag = "Host";
+                HostPlayer.AddComponent<HostCombat1>();
+
+                ClientPlayer = Players[1];
+                ClientPlayer.tag = "Client";
+                ClientPlayer.AddComponent<ClientCombatOg>();
+            }
+            else
+            {
+                HostPlayer = Players[1];
+                HostPlayer.tag = "Host";
+                HostPlayer.AddComponent<HostCombat1>();
+
+                ClientPlayer = Players[0];
+                ClientPlayer.tag = "Client";
+                ClientPlayer.AddComponent<ClientCombatOg>();
+            }
             
-            ClientPlayer = Players[0];
-            ClientPlayer.tag = "Client";
-            ClientPlayer.AddComponent<ClientCombatOg>();
+
 
 
             Debug.Log("Host Found !");
@@ -69,9 +84,10 @@ public class CombatManager : MonoBehaviour {
 
         if (ReferencesFound == true)
         {
-           
 
-           
+
+
+
             HostHealthREF = HostPlayer.GetComponent<HostCombat1>().HostHealth;
             HostDamageREF = HostPlayer.GetComponent<HostCombat1>().HostDamage;
           
@@ -123,7 +139,7 @@ public class CombatManager : MonoBehaviour {
                     HostHealthBarREF.fillAmount = HostHealthREF / 100f;
                     FightNotes.text = "A Clean Hit !";
                     HostAnimREF.SetTrigger("DEFBrokenTrigger");
-                    ClientAnimREF.SetTrigger("CpuATT");
+                    ClientAnimREF.SetTrigger("ATTAttackTrigger");
 
                     HostPlayer.GetComponent<HostCombat1>().HostInput = null;
                     FindObjectOfType<HostCombat1>().BlockableREF = 0;
@@ -136,7 +152,7 @@ public class CombatManager : MonoBehaviour {
                         TurnOver++;
                         FightNotes.text = "Blocked !";
                         HostAnimREF.SetTrigger("DEFBlockTrigger");
-                        ClientAnimREF.SetTrigger("CpuATTBlocked");
+                        ClientAnimREF.SetTrigger("ATTBlockedTrigger");
 
                         HostPlayer.GetComponent<HostCombat1>().HostInput = null;
                         FindObjectOfType<HostCombat1>().BlockableREF = 0;
@@ -147,7 +163,7 @@ public class CombatManager : MonoBehaviour {
                         HostHealthBarREF.fillAmount = HostHealthREF / 100f;
                         FightNotes.text = "A Clean Hit !";
                         HostAnimREF.SetTrigger("DEFBrokenTrigger");
-                        ClientAnimREF.SetTrigger("CpuATT");
+                        ClientAnimREF.SetTrigger("ATTAttackTrigger");
 
                         HostPlayer.GetComponent<HostCombat1>().HostInput = null;
                         FindObjectOfType<HostCombat1>().BlockableREF = 0;
@@ -162,7 +178,7 @@ public class CombatManager : MonoBehaviour {
                         TurnOver = 4;
                         FightNotes.text = "Blocked !";
                         HostAnimREF.SetTrigger("DEFBlockTrigger");
-                        ClientAnimREF.SetTrigger("CpuATTBlocked");
+                        ClientAnimREF.SetTrigger("ATTBlockedTrigger");
 
                         HostPlayer.GetComponent<HostCombat1>().HostInput = null;
                         FindObjectOfType<HostCombat1>().BlockableREF = 0;
@@ -173,7 +189,7 @@ public class CombatManager : MonoBehaviour {
                         HostHealthBarREF.fillAmount = HostHealthREF / 100f;
                         FightNotes.text = "A Clean Hit !";
                         HostAnimREF.SetTrigger("DEFBrokenTrigger");
-                        ClientAnimREF.SetTrigger("CpuATT");
+                        ClientAnimREF.SetTrigger("ATTAttackTrigger");
 
                         HostPlayer.GetComponent<HostCombat1>().HostInput = null;
                         FindObjectOfType<HostCombat1>().BlockableREF = 0;
@@ -196,7 +212,7 @@ public class CombatManager : MonoBehaviour {
                 TurnOver++;
                 FightNotes.text = "Blocked !";
                 HostAnimREF.SetTrigger("ATTBlockedTrigger");
-                ClientAnimREF.SetTrigger("CpuDEF");
+                ClientAnimREF.SetTrigger("DEFBlockTrigger");
 
                 return;
             }
@@ -209,7 +225,7 @@ public class CombatManager : MonoBehaviour {
                 {
                     HostAnimREF.SetTrigger("ATTUpTrigger");
 
-                    ClientAnimREF.SetTrigger("CpuDEFBroken");
+                    ClientAnimREF.SetTrigger("DEFBrokenTrigger");
                     HostAttPowerCheck();
                     ClientHealthBarREF.fillAmount = ClientHealthREF / 100f;
 
@@ -227,7 +243,7 @@ public class CombatManager : MonoBehaviour {
                 {
                     HostAnimREF.SetTrigger("ATTRightTrigger");
 
-                    ClientAnimREF.SetTrigger("CpuDEFBroken");
+                    ClientAnimREF.SetTrigger("DEFBrokenTrigger");
                     HostAttPowerCheck();
                     ClientHealthBarREF.fillAmount = ClientHealthREF / 100f;
 
@@ -244,7 +260,7 @@ public class CombatManager : MonoBehaviour {
                 {
                     HostAnimREF.SetTrigger("ATTAttackTrigger");
 
-                    ClientAnimREF.SetTrigger("CpuDEFBroken");
+                    ClientAnimREF.SetTrigger("DEFBrokenTrigger");
                     HostAttPowerCheck();
                     ClientHealthBarREF.fillAmount = ClientHealthREF / 100f;
 
@@ -268,12 +284,14 @@ public class CombatManager : MonoBehaviour {
         if(HostAttPower == "Light")
         {
             ClientHealthREF -= HostDamageREF;
+            FightNotes.text = "A Clean Hit !";
             Debug.Log("LIGHTTTTT");
         }
 
         if (HostAttPower == "Heavy")
         {
             ClientHealthREF -= HostDamageREF + 5;
+            FightNotes.text = "A Clean Hit !";
             Debug.Log("HEAVYYYYY");
 
         }
@@ -502,7 +520,8 @@ public class CombatManager : MonoBehaviour {
 
             ClientHealthBarREF = ClientPlayer.GetComponent<ClientCombatOg>().ClientHealthBar;
             ClientAnimREF = ClientPlayer.GetComponent<ClientCombatOg>().ClientAnim;
-          
+            HostAnimREF.SetBool("isFight", true);
+            ClientAnimREF.SetBool("isFight", true);
 
         }
 

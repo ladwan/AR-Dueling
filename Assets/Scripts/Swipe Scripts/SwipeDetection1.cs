@@ -60,13 +60,13 @@ public class SwipeDetection1 : MonoBehaviour {
                     {
                          if (Line.material.color == Color.red)
                          {
-                            GameObject.Find("Directional Light").GetComponent<CombatManager>().HostAttPower = "Heavy";
+                            Camera.main.GetComponent<CombatManager>().HostAttPower = "Heavy";
                          }
                          else 
 
                         if(Line.material.color == Color.green)
                         {
-                            GameObject.Find("Directional Light").GetComponent<CombatManager>().HostAttPower = "Light";
+                            Camera.main.GetComponent<CombatManager>().HostAttPower = "Light";
                         }
 
                          _fingerDownPosition = touch.position;
